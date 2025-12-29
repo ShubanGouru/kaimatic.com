@@ -31,32 +31,30 @@
         min-height: 100vh;
         padding: 48px 56px;
         display: flex;
+        flex-direction: column;
         gap: 40px;
         align-items: flex-start;
       }
 
-      .hero {
+      .hero-intro {
+        min-height: 30vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        flex: 1;
-        gap: 28px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         z-index: 1;
       }
 
-      .hero-intro {
-        text-align: center;
-        align-self: center;
-        margin-top: clamp(24px, 20vh, 220px);
-      }
-
-      .hero h1 {
+      .hero-intro h1 {
         font-size: 48px;
         font-weight: 500;
         margin: 0;
         letter-spacing: -0.5px;
       }
 
-      .hero p {
+      .hero-intro p {
         margin: 0;
         font-size: 16px;
         line-height: 1.6;
@@ -76,6 +74,14 @@
         letter-spacing: 1.4px;
         font-weight: 500;
         margin: 0;
+      }
+
+      .content-columns {
+        display: flex;
+        gap: 40px;
+        width: 100%;
+        flex: 1;
+        z-index: 1;
       }
 
       .panel {
@@ -113,6 +119,11 @@
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 1px;
+      }
+
+      .group-label {
+        display: block;
+        margin-bottom: 12px;
       }
 
       input,
@@ -255,8 +266,12 @@
           padding: 32px 24px 48px;
         }
 
-        .hero h1 {
+        .hero-intro h1 {
           font-size: 36px;
+        }
+
+        .content-columns {
+          flex-direction: column;
         }
 
         .button-group {
@@ -278,21 +293,24 @@
         <span class="blob four"></span>
       </div>
 
-      <section class="hero">
-        <div class="hero-intro">
-          <p class="section-title">Kaimatic</p>
-          <h1>Unlock operational upside in QSR</h1>
-        </div>
+      <section class="hero-intro">
+        <p class="section-title">Kaimatic</p>
+        <h1>Unlock operational upside in QSR</h1>
+      </section>
 
+      <section class="content-columns">
         <div class="panel">
-          <p class="panel-title">Work with us</p>
+          <div>
+            <p class="panel-title">Join us</p>
+            <h2>Want to work with us?</h2>
+          </div>
           <form
             class="js-form"
             action="https://formsubmit.co/ajax/kaimatic.team@gmail.com"
             method="post"
           >
             <div>
-              <p class="section-title">What do you best represent</p>
+              <label class="group-label">What do you best represent</label>
               <div class="button-group">
                 <label class="option">
                   <input
@@ -344,44 +362,44 @@
             <button class="submit" type="submit">Send message</button>
           </form>
         </div>
-      </section>
 
-      <section class="panel">
-        <div>
-          <p class="panel-title">Join our Mailing List</p>
-          <h2>Want to stay in the loop on our updates and progress?</h2>
-        </div>
-        <form
-          class="js-form"
-          action="https://formsubmit.co/ajax/kaimatic.team@gmail.com"
-          method="post"
-        >
-          <div class="form-row">
-            <div>
-              <label for="waitlist-name">Name</label>
-              <input id="waitlist-name" name="name" type="text" required />
-            </div>
-            <div>
-              <label for="waitlist-email">Email</label>
-              <input id="waitlist-email" name="email" type="email" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div>
-              <label for="waitlist-company">Company</label>
-              <input id="waitlist-company" name="company" type="text" required />
-            </div>
-            <div>
-              <label for="waitlist-role">Role</label>
-              <input id="waitlist-role" name="role" type="text" required />
-            </div>
-          </div>
+        <div class="panel">
           <div>
-            <label for="waitlist-notes">Notes (optional)</label>
-            <textarea id="waitlist-notes" name="notes"></textarea>
+            <p class="panel-title">Join our Mailing List</p>
+            <h2>Want to stay in the loop on our updates and progress?</h2>
           </div>
-          <button class="submit" type="submit">Join our Mailing List</button>
-        </form>
+          <form
+            class="js-form"
+            action="https://formsubmit.co/ajax/kaimatic.team@gmail.com"
+            method="post"
+          >
+            <div class="form-row">
+              <div>
+                <label for="waitlist-name">Name</label>
+                <input id="waitlist-name" name="name" type="text" required />
+              </div>
+              <div>
+                <label for="waitlist-email">Email</label>
+                <input id="waitlist-email" name="email" type="email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="waitlist-company">Company</label>
+                <input id="waitlist-company" name="company" type="text" required />
+              </div>
+              <div>
+                <label for="waitlist-role">Role</label>
+                <input id="waitlist-role" name="role" type="text" required />
+              </div>
+            </div>
+            <div>
+              <label for="waitlist-notes">Notes (optional)</label>
+              <textarea id="waitlist-notes" name="notes"></textarea>
+            </div>
+            <button class="submit" type="submit">Join our Mailing List</button>
+          </form>
+        </div>
       </section>
     </div>
 
