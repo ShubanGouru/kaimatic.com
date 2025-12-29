@@ -29,15 +29,15 @@
       .page {
         position: relative;
         min-height: 100vh;
-        padding: 48px 56px;
+        padding: 36px 56px 40px;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 32px;
         align-items: flex-start;
       }
 
       .hero-intro {
-        min-height: 30vh;
+        min-height: 22vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -45,6 +45,13 @@
         align-items: center;
         text-align: center;
         z-index: 1;
+      }
+
+      .hero-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
       }
 
       .hero-intro h1 {
@@ -61,11 +68,11 @@
       }
 
       .section-title {
-        font-size: 14px;
+        font-size: 18px;
         text-transform: uppercase;
-        letter-spacing: 1.4px;
-        font-weight: 500;
-        margin-bottom: 12px;
+        letter-spacing: 1.8px;
+        font-weight: 600;
+        margin: 0;
       }
 
       .panel-title {
@@ -189,6 +196,29 @@
         cursor: pointer;
       }
 
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 999px;
+        border: 1px solid rgba(66, 66, 66, 0.4);
+        color: #424242;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      .social-link svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+
+      .social-link:hover {
+        transform: translateY(-1px);
+        border-color: rgba(66, 66, 66, 0.8);
+      }
+
       .toast {
         position: fixed;
         bottom: 32px;
@@ -263,11 +293,15 @@
 
         .page {
           flex-direction: column;
-          padding: 32px 24px 48px;
+          padding: 28px 20px 40px;
         }
 
         .hero-intro h1 {
           font-size: 36px;
+        }
+
+        .section-title {
+          font-size: 16px;
         }
 
         .content-columns {
@@ -294,7 +328,22 @@
       </div>
 
       <section class="hero-intro">
-        <p class="section-title">Kaimatic</p>
+        <div class="hero-title">
+          <p class="section-title">Kaimatic</p>
+          <a
+            class="social-link"
+            href="https://linkedin.com/company/kaimatic"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Kaimatic on LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.45 20.45h-3.55v-5.56c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.66-1.86 3.42-1.86 3.66 0 4.33 2.41 4.33 5.55v6.2zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+              />
+            </svg>
+          </a>
+        </div>
         <h1>Unlock operational upside in QSR</h1>
       </section>
 
